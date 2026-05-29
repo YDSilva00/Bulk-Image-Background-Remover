@@ -1,16 +1,54 @@
-# React + Vite
+# Bulk Image Background Remover
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, modern, and private web application to remove backgrounds from bulk images (like signatures, documents, and portraits). Built with React and Vite, this tool uses `@imgly/background-removal` to process everything **100% locally in your browser** using WebAssembly and ONNX AI models. No images are ever uploaded to an external server.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Bulk Processing:** Drag and drop multiple images at once to process them in a queue.
+- **Local AI:** Uses an in-browser ONNX model for background removal—ensuring complete privacy and avoiding API costs or limits.
+- **ZIP Export:** Download all processed background-free images in a single ZIP file, or download them individually.
+- **Modern UI:** A clean, responsive interface built with a sleek dark mode and glassmorphism design.
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+You'll need [Node.js](https://nodejs.org/) (v16 or higher) and npm installed on your machine.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YDSilva00/Bulk-Image-Background-Remover.git
+   cd Bulk-Image-Background-Remover
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser:**
+   Navigate to `http://localhost:5173/` to use the app.
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/) - UI framework
+- [Vite](https://vitejs.dev/) - Lightning-fast frontend tooling
+- [@imgly/background-removal](https://img.ly/showcases/background-removal) - AI model for removing backgrounds in-browser
+- [JSZip](https://stuk.github.io/jszip/) - Zipping files on the client side
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js/) - Saving files on the client side
+- [Lucide React](https://lucide.dev/) - Beautiful SVG icons
+
+## 🔒 Privacy First
+
+Unlike many background removal tools, this application does **not** rely on a cloud API. Your sensitive images (such as physical signatures) never leave your device. The AI inference happens directly on your CPU/GPU through WebAssembly.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
